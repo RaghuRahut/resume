@@ -1,0 +1,41 @@
+@media only screen and (max-width: 900px) {
+  body {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  #description {
+    text-align: justify;
+  }
+
+  .head-container {
+    display: block;
+    height: fit-content;
+    margin-top: 30px;
+  }
+
+  .right-header-section ul {
+    list-style-type: none;
+    margin-left: auto !important;
+    padding-left: 0;
+  }
+
+  .right-header-section ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .twocolumns {
+    column-count: 1;
+  }
+
+  .right-header-section ul li i {
+    padding: 10px 10px 0px 0px;
+  }
+
+  .section span {
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,0 +1,149 @@
+.theme-color {
+  color :red;
+}
+
+.main {
+    width: 80%;  
+    margin: 10px auto;   
+}
+
+.heading {
+    font-size: xx-large;
+    text-align: center;
+    font-family :Arial, Helvetica, sans-serif;
+    font-weight:bolder; 
+    color :rgb(237 73 104);
+    border-top: 2px solid;
+    padding-top: 4px;
+    border-bottom: 2px solid;
+    border-left: 0px hidden;
+    border-right: 0px hidden;
+    border-color: rgb(143, 143, 143);
+    border-style:solid;
+    text-transform: uppercase;  
+}
+
+.accordion{
+  background-color: rgba(255, 0, 0, 0.200);
+  color: rgb(237 73 104);
+  text-transform:capitalize;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  font-family :Arial, Helvetica, sans-serif;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color:rgba(255, 0, 0, 0.150);
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: rgba(255, 0, 0, 0.050);
+    display: block;
+    overflow: hidden;
+  }
+
+  .submitblock{
+        display: flex;
+        justify-content: space-around;    
+  }
+ 
+
+  input[type=submit], input[type=reset]{
+    font-family :Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: inherit;  
+    border: 2px solid rgb(143, 143, 143); 
+    width: 40%;
+    padding: 10px;
+    text-transform: uppercase;
+    color :rgb(237 73 104);
+  }
+
+  textarea { resize: none; }
+
+  input[placeholder],textarea[placeholder],label,.txt{
+     font-style: italic;
+     color : gray;
+  }
+
+  .txtbox{
+     margin:10px;
+     padding: 5px;
+     border-radius:3px;
+     border: 1px solid rgba(255, 0, 0, 0.300);
+     background-color: rgba(255, 0, 0, 0.050);     
+  }
+  
+  .txt{
+    margin:10px;
+    padding: 5px;
+    font-family :Arial, Helvetica, sans-serif;
+  }
+  .txtbox:focus
+  {
+    border: 1px solid red !important;   
+    outline: 0;
+  }
+
+
+  .Orgbuttons{
+    display: flex;
+    justify-content: flex-end;  
+  }
+
+  .Orgbuttons button, #btnSkill{
+    margin: 10px;
+  }
+  
+  .newAddition{
+    border-top: 2px dashed red;    
+  }
+
+  
+.datecontrol{
+  display: flex;
+
+}
+
+.datecontrol input{
+  width : 100%
+}
+
+.datecontrol label{
+  padding-top: 15px
+}
+
+#skillpool span{
+  margin: 10px;
+  display: inline-block;
+  justify-content: space-between;
+  border-radius: 30px;
+  border: 1px solid red;
+}
+
+#skillpool span label{
+  padding-right: 20px;
+}
+.fonticon{
+pointer-events: none;
+}
+
+.requiredField{
+  outline: 2px dotted red;
+}
+
+div[class="col-sm-6"] input{
+  width: 100%;
+}
+
+.hiddenElement{
+  display: none !important;
+}

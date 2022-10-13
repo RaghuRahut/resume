@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+
+    <link href="css/bootstrap.min.css"  rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/normalize.css " />
+    <link rel="stylesheet" href="css/reset.css " />
+    <link rel="stylesheet" href="css/common.css " />
+    <link rel="stylesheet" href="css/resumeform.css " /> 
+    <link rel="stylesheet" href="css/resumeform-grid.css " />
+    <link rel="stylesheet" href="css/resumeform-media.css " />
+
+    <script src="js/fontawesome.js"></script>
+
+</head>
+<body>    
+    <div class="main">    
+    <form id="resumeForm" action="./resume.html" method="get"  >
+        <p class="heading" >Application form</p>
+        <br/>
+        <button type="button" class="accordion active">basic information</button>
+        <div class="panel panelBasicInfo" style="display: block;">
+            <div class="gridPanel1">
+            <input type="text" class="txtbox item1" id="Name" name="Name" placeholder="Name*" requiret>
+            <input type="text" class="txtbox item2" id="Designation" name="Designation" placeholder="Designation*" requiret>
+            <textarea rows="5" class="txtbox item3"  id="Description" name="Description" placeholder="Brief self description..*" requiret></textarea>
+            <input type="tel" class="txtbox item4" id="Phone" name="Phone" placeholder="Phone*" requiret>
+            <input type="email" class="txtbox item5" id="Email" name="Email" placeholder="Email*" requiret>
+            <input type="text" class="txtbox item6" id="Location" name="Location" placeholder="Location*" requiret>
+            <input type="text" class="txtbox item7" id="linkedin-url" name="linkedin-url" placeholder="Linkedin url">
+            <input type="text" class="txtbox item8" id="skype-url" name="skype-url" placeholder="Skype url">
+        </div>
+          
+        </div>
+
+        <button type="button" class="accordion active">Work Experience</button>
+        <div class="panel" style="display: block;">
+           <div id="workexp-1" class="gridPanel2">
+            <input type="text" class="txtbox item1" name="Organization-1" placeholder="Organization Name">
+            <input type="text" class="txtbox item2" name="Location-1" placeholder="Location">
+            <input type="text" class="txtbox item3" name="Designation-1" placeholder="Your Designation">
+            <div class="datecontrol item4">
+            <label for="Start">From</label>
+            <input type="month" class="txtbox"  name="Start-1" placeholder="Start">
+            </div>
+            <div class="datecontrol item5">
+                <label for="Start">Until</label>
+            <input type="month" class="txtbox" name="End-1" placeholder="End">
+            </div>
+            <textarea rows="5" class="txtbox item6" name="Keypoints-1" placeholder="Roles and Responsiblities"></textarea>
+           </div> 
+              
+           <div class="Orgbuttons">
+            <button type="button" id="addOrg" class="btn btn-danger" onclick="addWorkExpControlSet()" >Add Organisation</button>
+            <button type="button" id="removeOrg" class="btn btn-danger" onclick="removeWorkExpControlSet()" >Remove Organisation</button>
+           </div>  
+        </div>
+
+        <button type="button" class="accordion active">Education</button>
+        <div class="panel" style="display: block;">
+            <div id="education-1" class="gridPanel3">
+                <input type="text" class="txtbox item1" name="Degree-1" placeholder="Degree/Graudation Details">
+                <input type="text" class="txtbox item2" name="University-1" placeholder="Location">
+                <div class="datecontrol item4">
+                    <label for="Start">From</label>
+                    <input type="month" class="txtbox"  name="DegreeStart-1" placeholder="Start">
+                    </div>
+                    <div class="datecontrol item5">
+                        <label for="Start">Until</label>
+                    <input type="month" class="txtbox" name="DegreeEnd-1" placeholder="End">
+                    </div>
+            </div>
+        </div>
+
+        <button type="button" class="accordion active">Languages</button>       
+        <div class="panel" style="display: block;">
+        <p class="txt" >Please enter the languages you know and rate it out of 5 as how proficent you are in that language.</p>
+        <div class="languages">
+        <input type="text" id="Language-1" class="txtbox" name="Language-1" placeholder="Language(English)*" requiret>
+        <input type="range" id="LanguageRating-1" name="LanguageRating-1"  min="0" max="5">
+        <br>        
+        <input type="text" id="Language-2" class="txtbox"  name="Language-2" placeholder="Language*" requiret>
+        <input type="range" id="LanguageRating-2"  name="LanguageRating-2" min="0" max="5">
+        <br>        
+        <input type="text" id="Language-3"  class="txtbox"  name="Language-3" placeholder="Language*" requiret>
+        <input type="range" id="LanguageRating-3"  name="LanguageRating-3" min="0" max="5">
+        <br>
+        </div>
+        </div>     
+
+        <button type="button" class="accordion active">Skills</button>
+        <div class="panel" style="display: block;">
+         <div id="divSkills" class="gridSkills">                     
+            <input type="text" id="skill" name="skill" class="txtbox item1" placeholder="Please ener your skills in a comma(',') separated list'">
+            <button type="button" id="btnSkill" class="btn  btn-danger"  >Add Skills</button>
+            <div id="skillpool" class="txtbox item3" >
+                <p class="txt" >Skills list</p>
+            </div>
+        </div>
+        <input type="text" id="Skills" name="Skills" value="" hidden>  
+        </div>
+
+        <button type="button" class="accordion active">Organisations</button>
+        <div class="panel" style="display: block;">
+            <div id="Org-1" class="gridPanel4">
+                <input type="text" class="txtbox item1" name="Org-1" placeholder="Previous Employer Company name">
+                <div class="datecontrol item2">
+                    <label for="from-year">From</label>
+                    <input type="month" class="txtbox"  name="from-year-1" placeholder="Start">
+                    </div>
+                    <div class="datecontrol item3">
+                        <label for="to-year">Until</label>
+                    <input type="month" class="txtbox" name="to-year-1" placeholder="End">
+                    </div>
+            </div>
+            <div class="Orgbuttons">
+                <button type="button" id="addOrg" class="btn btn-danger" onclick="addOrgControlSet()" >Add Employer</button>
+                <button type="button" id="removeOrg" class="btn btn-danger" onclick="removeOrgControlSet()" >Remove Employer</button>
+            </div>  
+        </div>
+
+        <button type="button" class="accordion active">Honours and Awards</button>
+        <div class="panel" style="display: block;">
+            <div id="Honours-1" class="gridPanel5">
+                <input type="text" class="txtbox item1" name="Honour-1" placeholder="Honours / Awards">
+                <input type="text" class="txtbox item2" name="Award-1" placeholder="Authorising Organisation/Institute name">
+            </div>
+            <div class="Orgbuttons">
+                <button type="button" id="addAwards" class="btn btn-danger" onclick="addHonoursControlSet()" >Add Awards</button>
+                <button type="button" id="removeAwards" class="btn btn-danger" onclick="removeHonoursControlSet()" >Remove Awards</button>
+            </div>  
+        </div>
+
+        <button type="button" class="accordion active">Conferences and Courses</button>
+        <div class="panel panel6" style="display: block;">
+            <div id="Conferences-1" class="gridPanel6">
+                <input type="text" class="txtbox item1" name="Course-1" placeholder="Conferences/Course Name">
+                <input type="text" class="txtbox item2" name="Subtitle-1" placeholder="Authorising Organisation/Institute name">
+            </div>
+            <div id="Conferences-2" class="gridPanel6 newAddition hiddenElement">
+                <input type="text" class="txtbox item1" name="Course-2" placeholder="Conferences/Course Name">
+                <input type="text" class="txtbox item2" name="Subtitle-2" placeholder="Authorising Organisation/Institute name">
+              </div> <div id="Conferences-3" class="gridPanel6 newAddition hiddenElement">
+                <input type="text" class="txtbox item1" name="Course-3" placeholder="Conferences/Course Name">
+                <input type="text" class="txtbox item2" name="Subtitle-3" placeholder="Authorising Organisation/Institute name">
+              </div> <div id="Conferences-4" class="gridPanel6 newAddition hiddenElement">
+                <input type="text" class="txtbox item1" name="Course-4" placeholder="Conferences/Course Name">
+                <input type="text" class="txtbox item2" name="Subtitle-4" placeholder="Authorising Organisation/Institute name">
+              </div> <div id="Conferences-5" class="gridPanel6 newAddition hiddenElement">
+                <input type="text" class="txtbox item1" name="Course-5" placeholder="Conferences/Course Name">
+                <input type="text" class="txtbox item2" name="Subtitle-5" placeholder="Authorising Organisation/Institute name">
+              </div>
+
+            <div class="Orgbuttons">
+                <button type="button" id="addCourse" class="btn btn-danger" onclick="addCourseControlSet()" >Add Course</button>
+                <button type="button" id="removeCourse" class="btn btn-danger" onclick="removeCourseControlSet()" >Remove Course</button>
+            </div>  
+        </div>
+     
+        <br/>
+
+        <div class="submitblock"  >
+            <input type="submit" value="submit" >
+            <input type="reset" onclick="resetfrom()" >
+        </div>
+    </div>
+    </form>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/resumeform.js" type="text/javascript"></script>
+</body>
+</html>

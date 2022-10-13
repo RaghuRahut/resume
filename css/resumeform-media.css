@@ -1,0 +1,108 @@
+@media only screen and (max-width: 900px) {
+  body {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .gridPanel1 input,.gridPanel2 input, .gridPanel3 input,.gridSkills input, .gridPanel5 input , .gridPanel4 input , .gridPanel6 input , #Description {
+    width: auto;
+  }
+  /*---------------------------------------------------------------------------*/
+
+  .gridPanel1 .item3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .gridPanel1 .item2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .gridPanel1 .item8 {
+    grid-column: 1;
+    grid-row: 8;
+  }
+
+  .gridPanel2{
+    display: grid;      
+   
+  } 
+  .gridPanel2 .item1 {
+  grid-column: 1 ;
+  grid-row: 1;
+  }
+  
+  .gridPanel2 .item2 {
+  grid-column: 1 ;
+  grid-row: 2 ;
+  }
+  
+  .gridPanel2 .item3 {
+  grid-column: 1 ;
+  grid-row: 3 ;
+  }
+  
+  .gridPanel2 .item4 {
+  grid-column: 1 ;
+  grid-row: 4;
+  }
+  .gridPanel2 .item5 {
+  grid-column: 1 ;
+  grid-row: 5;
+  }
+  
+  .gridPanel2 .item6 {
+  grid-column: 1 ;
+  grid-row: 6;
+  }
+
+  .gridPanel3 .item1 {
+    grid-column: 1 ;
+    grid-row: 1;
+    }
+.gridPanel3 .item2 {
+    grid-column: 1;
+    grid-row: 2 ;
+    }
+
+    .gridSkills .item1 {
+    grid-column: 1 ;
+    grid-row: 1;
+    }
+
+    .gridSkills .item2 {
+    grid-column: 1;
+    grid-row: 2 ;
+    }
+    .gridSkills .item3 {
+    grid-column: 1;
+    grid-row: 3 ;
+    }
+
+    .gridPanel5, .gridPanel6{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .gridPanel4{
+        display: grid;
+        grid-template-columns: auto;
+    }
+  /*---------------------------------------------------------------------------*/
+
+  .languages{
+    display: block;
+    }
+    .txt{
+        text-align: justify;
+    }
+
+  .Orgbuttons {
+    display: block;
+    justify-content: flex-end;
+  }
+  .Orgbuttons button{
+      width: 90%;
+  }
+  input {
+    width: 100%;
+  }
+}

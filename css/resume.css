@@ -1,0 +1,147 @@
+.section {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.section span {
+  border-top: 2px solid;
+  padding-top: 4px;
+  border-bottom: 2px solid;
+  border-left: 0px hidden;
+  border-right: 0px hidden;
+  border-color: rgb(143, 143, 143);
+  border-style: solid;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.subheading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.subheading i {
+  margin-left: 3px;
+}
+
+.subcontent {
+  font-style: italic;
+  font-size: small;
+  color: grey;
+}
+
+.subcontent-flex {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.skillname {
+  color: white;
+  background-color: red;
+  border-right: 3px;
+  border-top: 2px;
+  line-height: 2;
+  border-radius: 7%;
+  padding: 3px 5px;
+  margin: 3px;
+}
+
+.head-container {
+  display: flex;
+  height: fit-content;
+
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.head-container div {
+  width: 100%;
+}
+
+.right-header-section ul {
+  text-align: right;
+  line-height: 200%;
+}
+
+.right-header-section ul li i {
+  padding: 10px 0px 0px 10px;
+}
+
+.right-header-section ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+main {
+  background-color: white;
+  padding-top: 10px;
+}
+
+#Name {
+  font-family: sans-serif;
+  font-size: 36px;
+  margin-bottom: 2px;
+}
+
+#Designation {
+  font-family: sans-serif;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+body {
+  max-width: 70%;
+  margin: auto;
+}
+
+ul.bulletedList {
+  list-style-type: "-";
+  list-style-position: outside;
+
+  margin-left: 0px;
+}
+
+.twocolumns {
+  column-count: 2;
+}
+
+#languages,
+#Skills,
+#education,
+#work-experience {
+  break-inside: avoid;
+}
+
+.langitem {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0px 15px 0px;
+}
+
+.langitem span.langName {
+  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.langitem span.langRating {
+  width: 60%;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.langRating i {
+  font-size: 1.25em;
+}
